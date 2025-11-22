@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hope Fund - Liên hệ</title>
+    <link rel="icon" href="../Assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../Assets/css/contact.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="logo">
+                    <img src="../Assets/images/logo.png" alt="logo">
+                </div>
+                <div class="hamburger" onclick="toggleMenu()">
+                    <i class="fa-solid fa-list-ul"></i>
+                </div>
+                <nav class="navbar">
+                    <ul class="nav-menu">
+                        <div class="logo">
+                            <img src="../Assets/images/logo.png" alt="logo">
+                        </div>
+                        <div class="home">
+                            <button class="close-btn" onclick="toggleMenu()"><a href="/index.html"><i
+                                        class="fa-solid fa-house"></i></a></button>
+                        </div>
+                        <button class="close-btn" onclick="toggleMenu()">×</button>
+                        <li>
+                            <a class="TC" href="/index.html"><i class="fa fa-home"></i></a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Quyên góp <i class="fa-solid fa-caret-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Ủng hộ</a></li>
+                                <hr>
+                                <li><a href="#">Góp sức</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Hoạt động <i class="fa-solid fa-caret-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Tin tức</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="menu-green" href="/lien-he">Liên hệ <i class="fa-solid fa-caret-down"
+                                    style="opacity:0;"></i></a>
+                            <ul class="dropdown-menu">
+                                <li id="none"><a href="#"></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="overlay" onclick="toggleMenu()"></div>
+                </nav>
+            </div>
+        </header>
+        <section class="breadcrumb-section">
+            <h2>Liên hệ</h2>
+            <div class="breadcrumb">
+                <a href="/index.html"><i class="fa fa-home"></i></a>
+                <i class="fa fa-angle-right"></i>
+                <span class="active">Liên hệ</span>
+            </div>
+        </section>
+
+        <section class="contact-form">
+            <div class="container">
+                <h2>Liên hệ với chúng tôi</h2>
+                <p>Vui lòng nhập thông tin liên hệ vào khung dưới đây, chúng tôi sẽ phản hồi lại quý khách trong vòng 24
+                    giờ.</p>
+                <form action="https://formsubmit.co/nv.dangkhoa217@gmail.ccom" method="POST">
+                    <input type="text" name="name" placeholder="Họ và tên" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="number" name="phone" placeholder="Số điện thoại" required>
+                    <textarea name="message" placeholder="Nội dung liên hệ" rows="5" required></textarea>
+
+                    <!-- optional: thêm các hidden input để điều chỉnh hành vi -->
+                    <input type="hidden" name="_next" value="/cam-on/index.html">
+                    <!-- chuyển hướng sau khi gửi -->
+                    <input type="hidden" name="_captcha" value="false"> <!-- tắt captcha -->
+
+                    <button type="submit">Gửi</button>
+                </form>
+            </div>
+        </section>
+
+
+        <footer>
+            <div class="logo_footer">
+                <img src="../Assets/images/logo_footer.png" alt="">
+            </div>
+            <div class="footer">
+                <p>
+                    <a href="Tel:033 311 9655" title="Hotline:033 311 9655">
+                        <i class="fa-solid fa-phone"></i> <b>Hotline: </b><span>0333119655</span>
+                    </a>
+                </p>
+                <p>
+                    <a href="https://www.tiktok.com/@hopefund.24" title="Tiktok:hopefund.24" target="_blank">
+                        <i class="fa-brands fa-tiktok"></i> <b>TikTok: </b><span>hopefund.24</span>
+                    </a>
+                </p>
+                <p>
+                    <a href="https://www.instagram.com/hopefund.24/" title="Instagram:hopefund.24" target="_blank">
+                        <i class="fa-brands fa-square-instagram"></i> <b>Instagram: </b><span>hopefund.24</span>
+                    </a>
+                </p>
+                <p>
+                    <a href="https://www.facebook.com/profile.php?id=61569093429457&locale=vi_VN"
+                        title="https://www.facebook.com/profile.php?id=61569093429457&locale=vi_VN" target="_blank">
+                        <i class="fa-brands fa-facebook"></i> <b>Facebook: </b><span>HOPE FUND</span>
+                    </a>
+                </p>
+            </div>
+        </footer>
+    </div>
+    <div class="copyright full-width">
+        <p>Copyright 2025 © HOPE FUND. All Rights Reserved.</p>
+    </div>
+    <script src="Assets/js/script.js"></script>
+
+</body>
+<script src="https://kit.fontawesome.com/ddf2a00126.js" crossorigin="anonymous"></script>
+
+</html>

@@ -1,0 +1,133 @@
+/* Reset & base */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+:root {
+  --bg: #f7fafc;
+  --card: #ffffff;
+  --text: #0f172a;
+  --accent: #21d548;
+  --accent-contrast: #ffffff;
+  --shadow: 0 10px 25px rgba(2, 23, 14, 0.08);
+  --radius: 24px;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b1220;
+    --card: #0f2a1e;
+    --text: #e5e7eb;
+    --accent: #23e96f;
+    --accent-contrast: #0b1220;
+    --shadow: 0 10px 25px rgba(0, 0, 0, .35);
+  }
+}
+
+body {
+  /* Safe top/bottom cho tai thỏ */
+  padding-top: max(12px, env(safe-area-inset-top));
+  padding-bottom: max(12px, env(safe-area-inset-bottom));
+  margin: 0;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  background: var(--bg);
+  padding: clamp(12px, 2.5vw, 32px);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.thank-you-container {
+  width: min(920px, 100%);
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: clamp(24px, 6vw, 56px);
+  text-align: center;
+}
+
+/* Fluid, accessible type sizes */
+.thank-you-container h1 {
+  font-size: clamp(28px, 4.5vw, 48px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0 0 clamp(10px, 2vw, 16px);
+}
+
+.thank-you-container p {
+  font-size: clamp(16px, 2.6vw, 20px);
+  opacity: .9;
+  margin: 0 0 clamp(20px, 3vw, 28px);
+}
+
+/* Primary action button */
+.back-home {
+  display: inline-block;
+  min-width: clamp(180px, 40vw, 260px);
+  text-decoration: none;
+  background: var(--accent);
+  color: var(--accent-contrast);
+  padding: clamp(14px, 3.5vw, 18px) clamp(18px, 6vw, 28px);
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: clamp(16px, 2.8vw, 18px);
+  line-height: 1;
+  outline: none;
+  border: 2px solid transparent;
+  transition: transform .15s ease, box-shadow .15s ease, background-color .15s ease, border-color .15s ease;
+  box-shadow: 0 6px 14px rgba(43, 121, 74, 0.25);
+}
+
+.back-home:focus-visible {
+  border-color: rgba(14, 233, 98, 0.7);
+}
+
+.back-home:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(14, 233, 83, 0.28);
+}
+
+.back-home:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(14, 233, 113, 0.25);
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .back-home {
+    transition: none;
+  }
+}
+
+/* Small devices: ensure content stays large and centered */
+@media (max-width: 420px) {
+  .thank-you-container {
+    border-radius: 18px;
+  }
+}
+
+/* Very large displays: slightly increase spacing */
+@media (min-width: 1280px) {
+  .thank-you-container {
+    padding: 64px;
+  }
+}
+
+/* Safe-area padding for notched devices */
+@supports (padding: max(0px)) {
+
+  /* Safe-area cho thiết bị có tai thỏ */
+  body {
+    /* Safe top/bottom cho tai thỏ */
+    padding-top: max(12px, env(safe-area-inset-top));
+    padding-bottom: max(12px, env(safe-area-inset-bottom));
+    padding: max(12px, env(safe-area-inset-left)) max(12px, env(safe-area-inset-right));
+  }
+}
